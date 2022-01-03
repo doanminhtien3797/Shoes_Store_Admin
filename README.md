@@ -1,1 +1,5 @@
-# Shoes_Store_Admin
+# admin
+đăng nhập với account:
+
+name : admin@gmail.com
+password : 123456
