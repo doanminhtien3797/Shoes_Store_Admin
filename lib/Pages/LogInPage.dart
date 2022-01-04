@@ -556,7 +556,7 @@ class _LoginPageState extends State<LoginPage> {
 
         // ignore: missing_return
         docRef.get().then((documentSnapshot) async {
-          if (documentSnapshot["isLoggedIn"] == false) {
+          if (documentSnapshot["isLoggedIn"] == true) {
             setState(() {
               isLoggedIn = false;
             });
@@ -568,7 +568,7 @@ class _LoginPageState extends State<LoginPage> {
                 backgroundColor: Colors.red,
                 textColor: Colors.white,
                 fontSize: 15.0);
-          } else if (documentSnapshot["isLoggedIn"] == true) {
+          } else if (documentSnapshot["isLoggedIn"] == false) {
             Firestore.instance
                 .collection("users")
                 .document(user.uid)
